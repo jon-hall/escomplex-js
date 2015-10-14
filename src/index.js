@@ -51,7 +51,10 @@ exports.ecmaFeatures = {
     generators: true,
 
     // React JSX parsing
-    jsx: true
+    jsx: true,
+
+    // enable parsing of arrow functions
+    arrowFunctions: true
 };
 
 function analyse (source, options) {
@@ -87,4 +90,3 @@ function performAnalysis (ast, options) {
 function analyseSource (source, options) {
     return performAnalysis(getSyntaxTree(source), options);
 }
-
